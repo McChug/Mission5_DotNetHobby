@@ -1,0 +1,130 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.side-margins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 2vw;
+}
+
+/* Page Heading Home */
+.page-hero-home {
+    position: relative;
+    height: 30vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 1px 2px 3px #00000050;
+    box-shadow: inset 0 -10px 8px 2px #00000030;
+}
+
+.page-hero-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/ai_bear_hero.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -17vw;
+    opacity: 85%;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+/* Page Heading Calculator */
+.page-hero-calculator {
+    position: relative;
+    height: 30vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 1px 2px 3px #00000050;
+    box-shadow: inset 0 -10px 8px 2px #00000030;
+}
+
+.page-hero-calculator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/ai_bear_calculator.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 85%;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+@media (width < 1000px) {
+    .page-hero::before {
+        background-attachment: scroll;
+        background-position: center;
+        background-size: 150%;
+    }
+}
+
+.text-img-grid {
+    max-width: 850px;
+    display: flex;
+    gap: 5vw;
+}
+
+.text-img-grid p {
+    text-align: center;
+    margin: auto 0;
+}
+
+@media (width < 1100px) {
+    .text-img-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-img-grid.img-first img {
+        order: 1;
+    }
+}

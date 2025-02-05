@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+<div class="page-hero-calculator">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<div class="side-margins">
+    <h2>Bear Wrestling Tutoring Calculator</h2>
+    <div class="d-flex flex-column">
+        <label for="hours">Enter the number of hours needed:</label>
+        <input type="number" id="hours" min="1" placeholder="Enter hours">
+        <div id="error" class="error"></div>
+    </div>
+    <div class="d-flex flex-column">
+        <label for="rate">Hourly Rate ($):</label>
+        <input type="text" id="rate" value="150" readonly>
+    </div>
+
+    <button id="calculate">Calculate Total</button>
+
+    <div class="d-flex flex-column">
+        <label for="total">Total Cost ($):</label>
+        <input type="text" id="total" readonly>
+    </div>
+
+    <p>Study back up on <a asp-area="" asp-controller="Home" asp-action="Index">Bear Wrestling</a>!</p>
+</div>
